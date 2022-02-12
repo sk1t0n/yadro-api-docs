@@ -1,0 +1,158 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Yadro API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/account": {
+            "get": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Возвращает информацию об аккаунте",
+                "operationId": "7bc88bd17d6e87fa9a40c24918edfa63",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/account/statuses": {
+            "get": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Возвращает информацию о статусах главной воронки",
+                "operationId": "8e9d1f41691874b49926004aadef3c62",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/account/allStatuses": {
+            "get": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Возвращает информацию о воронках и их статусах",
+                "operationId": "51b5486a2cc571a2942730aa5183fa36",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/account/pipelines": {
+            "get": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Возвращает информацию о воронках",
+                "operationId": "088acd1eb0979e52d5d1ffb7c7a6f898",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/account/users": {
+            "get": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Возвращает информацию о пользователях",
+                "operationId": "3d340fa7df8434c1a2c417de133a4f48",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/account/fields": {
+            "get": {
+                "tags": [
+                    "account"
+                ],
+                "summary": "Возвращает информацию о полях",
+                "operationId": "0092baecda539f66c44cab0197cd870b",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "account"
+        },
+        {
+            "name": "bp"
+        },
+        {
+            "name": "chat"
+        },
+        {
+            "name": "company"
+        },
+        {
+            "name": "contact"
+        },
+        {
+            "name": "customer"
+        },
+        {
+            "name": "docflow"
+        },
+        {
+            "name": "field"
+        },
+        {
+            "name": "lead"
+        },
+        {
+            "name": "links"
+        },
+        {
+            "name": "mail"
+        },
+        {
+            "name": "note"
+        },
+        {
+            "name": "pbx"
+        },
+        {
+            "name": "sensei"
+        },
+        {
+            "name": "sms"
+        },
+        {
+            "name": "task"
+        },
+        {
+            "name": "telegram"
+        },
+        {
+            "name": "transaction"
+        },
+        {
+            "name": "unsorted"
+        },
+        {
+            "name": "yadro"
+        }
+    ],
+    "security": [
+        []
+    ]
+}
