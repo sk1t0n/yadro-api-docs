@@ -88,6 +88,147 @@
                     }
                 }
             }
+        },
+        "/company/{id}": {
+            "get": {
+                "tags": [
+                    "company"
+                ],
+                "summary": "Возвращает компанию по id",
+                "operationId": "830ea207ae23d95b7e77de3d6cacd8b9",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id компании",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/company/search": {
+            "get": {
+                "tags": [
+                    "company"
+                ],
+                "summary": "Поиск компаний",
+                "operationId": "f2352c26adbed6f45104a9ec756bc7cc",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "строка поиска",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/company/list": {
+            "get": {
+                "tags": [
+                    "company"
+                ],
+                "summary": "Возвращает список компаний",
+                "operationId": "c6b4b9bedcf759825f765f18cda69cbd",
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "количество запрашиваемых элементов",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "смещение, относительно которого нужно вернуть элементы",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/company/create": {
+            "post": {
+                "tags": [
+                    "company"
+                ],
+                "summary": "Создаёт компании",
+                "operationId": "9135ad9a68c66ee292cb4e13fb9b2eba",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "name": "Company name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/company/update": {
+            "post": {
+                "tags": [
+                    "company"
+                ],
+                "summary": "Обновляет компании",
+                "operationId": "7a55e72c1bd97c7cbcb6e4dbe22ed89a",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "id": 12345678,
+                                        "name": "New company name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
         }
     },
     "tags": [
