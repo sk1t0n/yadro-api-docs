@@ -308,6 +308,7 @@ class LeadController extends Controller
      *     tags={"lead"},
      *     path="/lead/create",
      *     summary="Создаёт сделки",
+     *     description="crm_user_id - id ответственного (менеджера), status - id статуса (этапа сделки внутри воронки)",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
