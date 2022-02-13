@@ -220,6 +220,7 @@ class CompanyController extends Controller
      *     tags={"company"},
      *     path="/company/create",
      *     summary="Создаёт компании",
+     *     description="crm_user_id - id ответственного (менеджера)",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
