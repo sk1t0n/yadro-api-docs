@@ -370,6 +370,34 @@
                     }
                 }
             }
+        },
+        "/field/create": {
+            "post": {
+                "tags": [
+                    "field"
+                ],
+                "summary": "Создаёт кастомные поля",
+                "operationId": "ebcd0af5323b48967b79d884ab9f75a5",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "name": "Custom field name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
         }
     },
     "tags": [

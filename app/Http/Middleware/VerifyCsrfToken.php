@@ -16,5 +16,6 @@ class VerifyCsrfToken extends Middleware
         '/company/update',
         '/contact/create',
         '/contact/update',
+        '/field/create',
     ];
 }
