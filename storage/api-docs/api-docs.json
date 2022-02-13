@@ -590,7 +590,9 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "name": "Lead name"
+                                        "name": "Lead name",
+                                        "crm_user_id": 7827994,
+                                        "status": "20715778"
                                     }
                                 }
                             }
@@ -618,7 +620,7 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "id": 12345678,
+                                        "id": 27627167,
                                         "name": "New lead name"
                                     }
                                 }

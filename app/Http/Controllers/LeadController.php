@@ -35,7 +35,7 @@ class LeadController extends Controller
             'result' => [
                 [
                     'contact_id' => 46994293,
-                    'lead_id' => 19572173,
+                    'lead_id' => $id,
                     'last_modified' => 1644741223
                 ]
             ],
@@ -108,7 +108,7 @@ class LeadController extends Controller
             'code' => 1,
             'message' => 'Успешно выполнено',
             'result' => [
-                'id' => '19572173',
+                'id' => $id,
                 'name' => 'Test lead',
                 'date_create' => 1553853237,
                 'created_user_id' => '595371',
@@ -183,60 +183,62 @@ class LeadController extends Controller
             'code' => 1,
             'message' => 'Успешно выполнено',
             'result' => [
-                'id' => '27448995',
-                'name' => 'test name',
-                'date_create' => 1639380895,
-                'created_user_id' => '0',
-                'last_modified' => 1640164011,
-                'account_id' => '9585804',
-                'price' => '0',
-                'responsible_user_id' => '1620274',
-                'linked_company_id' => '52210551',
-                'group_id' => 30426,
-                'pipeline_id' => 3144,
-                'date_close' => 0,
-                'closest_task' => 1639416895,
-                'loss_reason_id' => 0,
-                'modified_user_id' => '7753246',
-                'deleted' => 0,
-                'tags' => [],
-                'status_id' => 20715778,
-                'custom_fields' => [
-                    [
-                        'id' => 1514415,
-                        'name' => 'utm_campaign',
-                        'type_id' => 21,
-                        'code' => 'UTM_CAMPAIGN',
-                        'values' => [
-                            [
-                                'value' => 'test'
+                [
+                    'id' => '27448995',
+                    'name' => 'test name',
+                    'date_create' => 1639380895,
+                    'created_user_id' => '0',
+                    'last_modified' => 1640164011,
+                    'account_id' => '9585804',
+                    'price' => '0',
+                    'responsible_user_id' => '1620274',
+                    'linked_company_id' => '52210551',
+                    'group_id' => 30426,
+                    'pipeline_id' => 3144,
+                    'date_close' => 0,
+                    'closest_task' => 1639416895,
+                    'loss_reason_id' => 0,
+                    'modified_user_id' => '7753246',
+                    'deleted' => 0,
+                    'tags' => [],
+                    'status_id' => 20715778,
+                    'custom_fields' => [
+                        [
+                            'id' => 1514415,
+                            'name' => 'utm_campaign',
+                            'type_id' => 21,
+                            'code' => 'UTM_CAMPAIGN',
+                            'values' => [
+                                [
+                                    'value' => 'test'
+                                ]
+                            ]
+                        ],
+                        [
+                            'id' => 971145,
+                            'name' => 'CITY',
+                            'type_id' => 1,
+                            'values' => [
+                                [
+                                    'value' => 'test'
+                                ]
+                            ]
+                        ],
+                        [
+                            'id' => 1519721,
+                            'name' => 'book_ak',
+                            'type_id' => 6,
+                            'values' => [
+                                [
+                                    'value' => '2022-01-07 00:00:00'
+                                ]
                             ]
                         ]
                     ],
-                    [
-                        'id' => 971145,
-                        'name' => 'CITY',
-                        'type_id' => 1,
-                        'values' => [
-                            [
-                                'value' => 'test'
-                            ]
-                        ]
-                    ],
-                    [
-                        'id' => 1519721,
-                        'name' => 'book_ak',
-                        'type_id' => 6,
-                        'values' => [
-                            [
-                                'value' => '2022-01-07 00:00:00'
-                            ]
-                        ]
-                    ]
-                ],
-                'main_contact_id' => 52203019,
-                'score' => 0,
-                'company_name' => 'Some company'
+                    'main_contact_id' => 52203019,
+                    'score' => 0,
+                    'company_name' => 'Some company'
+                ]
             ],
             'count' => 1
         ]);
@@ -312,7 +314,11 @@ class LeadController extends Controller
      *             @OA\Schema(
      *                 type="array",
      *                 @OA\Items(
-     *                     example={"name": "Lead name"}
+     *                     example={
+     *                         "name": "Lead name",
+     *                         "crm_user_id": 7827994,
+     *                         "status": "20715778"
+     *                     }
      *                 )
      *             )
      *         )
@@ -328,8 +334,18 @@ class LeadController extends Controller
         return response()->json([
             'code' => 1,
             'message' => 'Успешно выполнено',
-            'result' => [],
-            'count' => 0
+            'result' => [
+                'leads' => [
+                    'add' => [
+                        [
+                            'id' => '27627175',
+                            'request_id' => 0
+                        ]
+                    ]
+                ],
+                'server_time' => 1644765009
+            ],
+            'count' => 2
         ]);
     }
 
@@ -344,7 +360,7 @@ class LeadController extends Controller
      *             @OA\Schema(
      *                 type="array",
      *                 @OA\Items(
-     *                     example={"id": 12345678, "name": "New lead name"}
+     *                     example={"id": 27627167, "name": "New lead name"}
      *                 )
      *             )
      *         )
@@ -385,6 +401,4 @@ class LeadController extends Controller
             return response()->json(null, 400);
         }
     }
-
-
 }
