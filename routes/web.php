@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
    return redirect('/api/documentation');
@@ -35,4 +36,12 @@ Route::controller(CompanyController::class)->group(function () {
     Route::get('/company/list', 'list');
     Route::post('/company/create', 'create');
     Route::post('/company/update', 'update');
+});
+
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contact/{id}', 'contact');
+    Route::get('/contact/search', 'search');
+    Route::get('/contact/list', 'list');
+    Route::post('/contact/create', 'create');
+    Route::post('/contact/update', 'update');
 });

@@ -25,6 +25,11 @@
       background: #fafafa;
     }
 
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
     .topbar {
         display: none;
     }
@@ -36,7 +41,9 @@
 </head>
 
 <body>
-<div id="swagger-ui"></div>
+<div class="container">
+    <div id="swagger-ui"></div>
+</div>
 
 <script src="{{ l5_swagger_asset($documentation, 'swagger-ui-bundle.js') }}"></script>
 <script src="{{ l5_swagger_asset($documentation, 'swagger-ui-standalone-preset.js') }}"></script>

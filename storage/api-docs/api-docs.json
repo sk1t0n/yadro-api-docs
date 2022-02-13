@@ -229,6 +229,147 @@
                     }
                 }
             }
+        },
+        "/contact/{id}": {
+            "get": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Возвращает контакт по id",
+                "operationId": "156c7eeb9035cc8f493a61f408425530",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id контакта",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/contact/search": {
+            "get": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Поиск контактов",
+                "operationId": "76209cd46294b0521529850feb3d642e",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "строка поиска",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/contact/list": {
+            "get": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Возвращает список контактов",
+                "operationId": "c3aede345bc18662cb3629dde056596b",
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "количество запрашиваемых элементов",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "смещение, относительно которого нужно вернуть элементы",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/contact/create": {
+            "post": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Создаёт контакты",
+                "operationId": "d7c19b30c19d615ae4e25a636d52d333",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "name": "Contact name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/contact/update": {
+            "post": {
+                "tags": [
+                    "contact"
+                ],
+                "summary": "Обновляет контакты",
+                "operationId": "40437c3c5e753a44010a287383814719",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "id": 12345678,
+                                        "name": "New contact name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
         }
     },
     "tags": [
