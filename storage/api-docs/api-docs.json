@@ -103,7 +103,8 @@
                         "description": "id компании",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "integer",
+                            "default": "52331573"
                         }
                     }
                 ],
@@ -128,7 +129,8 @@
                         "description": "строка поиска",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "default": "company"
                         }
                     }
                 ],
@@ -153,7 +155,8 @@
                         "description": "количество запрашиваемых элементов",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "integer",
+                            "default": "1"
                         }
                     },
                     {
@@ -162,7 +165,8 @@
                         "description": "смещение, относительно которого нужно вернуть элементы",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "integer",
+                            "default": "0"
                         }
                     }
                 ],
@@ -187,7 +191,8 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "name": "Company name"
+                                        "name": "Company name",
+                                        "crm_user_id": 7827994
                                     }
                                 }
                             }
@@ -215,7 +220,7 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "id": 12345678,
+                                        "id": 52331573,
                                         "name": "New company name"
                                     }
                                 }
