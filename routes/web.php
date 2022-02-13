@@ -20,6 +20,7 @@ use App\Http\Controllers\FieldController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\NoteController;
 use App\Http\Controllers\TaskController;
+use App\Http\Controllers\YadroController;
 
 Route::get('/', function () {
    return redirect('/api/documentation');
@@ -74,4 +75,8 @@ Route::controller(TaskController::class)->group(function () {
     Route::get('/task/list', 'list');
     Route::get('/task/{id}', 'task');
     Route::post('/task/create', 'create');
+});
+
+Route::controller(YadroController::class)->group(function () {
+    Route::post('/yadro/sendToAmo', 'sendToAmo');
 });

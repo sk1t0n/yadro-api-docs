@@ -22,5 +22,6 @@ class VerifyCsrfToken extends Middleware
         '/note/create',
         '/note/update',
         '/task/create',
+        '/yadro/sendToAmo',
     ];
 }

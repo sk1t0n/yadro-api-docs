@@ -825,6 +825,34 @@
                     }
                 }
             }
+        },
+        "/yadro/sendToAmo": {
+            "post": {
+                "tags": [
+                    "yadro"
+                ],
+                "summary": "Перенаправляет запрос в AmoCRM",
+                "operationId": "bccf388e3dd0d48d27f657c9f6d59a87",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "example": {
+                                    "url": "/widgets/other_lead/8/i18n/ru.json",
+                                    "params": [],
+                                    "body": []
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
         }
     },
     "tags": [
