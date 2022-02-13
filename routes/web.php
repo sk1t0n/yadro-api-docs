@@ -19,6 +19,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
    return redirect('/api/documentation');
@@ -67,4 +68,10 @@ Route::controller(NoteController::class)->group(function () {
     Route::get('/note/{id}', 'note');
     Route::post('/note/create', 'create');
     Route::post('/note/update', 'update');
+});
+
+Route::controller(TaskController::class)->group(function () {
+    Route::get('/task/list', 'list');
+    Route::get('/task/{id}', 'task');
+    Route::post('/task/create', 'create');
 });

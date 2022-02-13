@@ -21,5 +21,6 @@ class VerifyCsrfToken extends Middleware
         '/lead/update',
         '/note/create',
         '/note/update',
+        '/task/create',
     ];
 }

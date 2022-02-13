@@ -729,6 +729,102 @@
                     }
                 }
             }
+        },
+        "/task/{id}": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "summary": "Возвращает задачу по id",
+                "operationId": "f8dd8e87080c58c05fdfd61ec46de527",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id задачи",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "39813909"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/task/list": {
+            "get": {
+                "tags": [
+                    "task"
+                ],
+                "summary": "Возвращает список задач",
+                "operationId": "b63ddb57730af5c1f6463f8c26747be5",
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "количество запрашиваемых элементов",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "2"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "смещение, относительно которого нужно вернуть элементы",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "0"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/task/create": {
+            "post": {
+                "tags": [
+                    "task"
+                ],
+                "summary": "Создаёт задачу",
+                "description": "crm_user_id - id ответственного, element_id - id сущности, element_type=2 - сделка, type=2 - встреча",
+                "operationId": "ace232b551c8c2c3edd4dbff9ab675fa",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "text": "New Task",
+                                        "crm_user_id": 7827994,
+                                        "time": "15.02.2022",
+                                        "element_id": 27626723,
+                                        "element_type": "2",
+                                        "type": "2"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
         }
     },
     "tags": [
