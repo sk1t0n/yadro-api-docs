@@ -33,17 +33,17 @@ Route::controller(AccountController::class)->group(function () {
 });
 
 Route::controller(CompanyController::class)->group(function () {
-    Route::get('/company/{id}', 'company');
     Route::get('/company/search', 'search');
     Route::get('/company/list', 'list');
+    Route::get('/company/{id}', 'company');
     Route::post('/company/create', 'create');
     Route::post('/company/update', 'update');
 });
 
 Route::controller(ContactController::class)->group(function () {
-    Route::get('/contact/{id}', 'contact');
     Route::get('/contact/search', 'search');
     Route::get('/contact/list', 'list');
+    Route::get('/contact/{id}', 'contact');
     Route::post('/contact/create', 'create');
     Route::post('/contact/update', 'update');
 });

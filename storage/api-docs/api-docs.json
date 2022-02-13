@@ -244,7 +244,8 @@
                         "description": "id контакта",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "integer",
+                            "default": "52331497"
                         }
                     }
                 ],
@@ -269,7 +270,8 @@
                         "description": "строка поиска",
                         "required": true,
                         "schema": {
-                            "type": "string"
+                            "type": "string",
+                            "default": "contact"
                         }
                     }
                 ],
@@ -294,7 +296,8 @@
                         "description": "количество запрашиваемых элементов",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "integer",
+                            "default": "1"
                         }
                     },
                     {
@@ -303,7 +306,8 @@
                         "description": "смещение, относительно которого нужно вернуть элементы",
                         "required": true,
                         "schema": {
-                            "type": "integer"
+                            "type": "integer",
+                            "default": "0"
                         }
                     }
                 ],
@@ -328,7 +332,8 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "name": "Contact name"
+                                        "name": "Contact name",
+                                        "crm_user_id": 7827994
                                     }
                                 }
                             }
@@ -356,7 +361,7 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "id": 12345678,
+                                        "id": 52331497,
                                         "name": "New contact name"
                                     }
                                 }
@@ -367,6 +372,9 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
                     }
                 }
             }
