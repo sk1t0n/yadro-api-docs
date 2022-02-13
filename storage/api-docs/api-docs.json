@@ -398,6 +398,230 @@
                     }
                 }
             }
+        },
+        "/lead/{id}/links": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Возвращает связанные контакты по id",
+                "operationId": "baa5fd4fe3a76b5427cfd887471698cf",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id сделки",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "19572173"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/lead/links": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Возвращает связанные контакты по id",
+                "operationId": "db361581cdf3a7653cbc663c4cfe5261",
+                "parameters": [
+                    {
+                        "name": "id[]",
+                        "in": "query",
+                        "description": "id сделки",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "default": "19572173"
+                            },
+                            "collectionFormat": "multi",
+                            "uniqueItems": true
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/lead/{id}": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Возвращает сделку по id",
+                "operationId": "3fca62e515a6a501bfaf80cd711f1e8e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id сделки",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "19572173"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/lead/search": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Поиск сделок",
+                "operationId": "4f76f06e51b0a4aa9ba82f8f32b0f11d",
+                "parameters": [
+                    {
+                        "name": "query",
+                        "in": "query",
+                        "description": "строка поиска",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "default": "test"
+                        }
+                    },
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "количество запрашиваемых элементов",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "смещение, относительно которого нужно вернуть элементы",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "0"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/lead/list": {
+            "get": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Возвращает список сделок",
+                "operationId": "31e82da56ac7fafaf560885f2c754903",
+                "parameters": [
+                    {
+                        "name": "count",
+                        "in": "query",
+                        "description": "количество запрашиваемых элементов",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "1"
+                        }
+                    },
+                    {
+                        "name": "offset",
+                        "in": "query",
+                        "description": "смещение, относительно которого нужно вернуть элементы",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "0"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/lead/create": {
+            "post": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Создаёт сделки",
+                "operationId": "94ba267502fcfa3d7761695a0f8425ce",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "name": "Lead name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/lead/update": {
+            "post": {
+                "tags": [
+                    "lead"
+                ],
+                "summary": "Обновляет сделки",
+                "operationId": "388b7022871cda5328f014b93cdb07c7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "id": 12345678,
+                                        "name": "New lead name"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                }
+            }
         }
     },
     "tags": [

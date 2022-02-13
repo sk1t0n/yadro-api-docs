@@ -17,6 +17,7 @@ use App\Http\Controllers\AccountController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FieldController;
+use App\Http\Controllers\LeadController;
 
 Route::get('/', function () {
    return redirect('/api/documentation');
@@ -49,4 +50,14 @@ Route::controller(ContactController::class)->group(function () {
 
 Route::controller(FieldController::class)->group(function () {
     Route::post('/field/create', 'create');
+});
+
+Route::controller(LeadController::class)->group(function () {
+    Route::get('/lead/search', 'search');
+    Route::get('/lead/list', 'list');
+    Route::get('/lead/links', 'links');
+    Route::get('/lead/{id}/links', 'linksById');
+    Route::get('/lead/{id}', 'lead');
+    Route::post('/lead/create', 'create');
+    Route::post('/lead/update', 'update');
 });
