@@ -18,6 +18,7 @@ use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\LeadController;
+use App\Http\Controllers\NoteController;
 
 Route::get('/', function () {
    return redirect('/api/documentation');
@@ -60,4 +61,10 @@ Route::controller(LeadController::class)->group(function () {
     Route::get('/lead/{id}', 'lead');
     Route::post('/lead/create', 'create');
     Route::post('/lead/update', 'update');
+});
+
+Route::controller(NoteController::class)->group(function () {
+    Route::get('/note/{id}', 'note');
+    Route::post('/note/create', 'create');
+    Route::post('/note/update', 'update');
 });

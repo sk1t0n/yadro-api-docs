@@ -183,6 +183,7 @@
                     "company"
                 ],
                 "summary": "Создаёт компании",
+                "description": "crm_user_id - id ответственного (менеджера)",
                 "operationId": "9135ad9a68c66ee292cb4e13fb9b2eba",
                 "requestBody": {
                     "content": {
@@ -329,6 +330,7 @@
                     "contact"
                 ],
                 "summary": "Создаёт контакты",
+                "description": "crm_user_id - id ответственного (менеджера)",
                 "operationId": "d7c19b30c19d615ae4e25a636d52d333",
                 "requestBody": {
                     "content": {
@@ -582,6 +584,7 @@
                     "lead"
                 ],
                 "summary": "Создаёт сделки",
+                "description": "crm_user_id - id ответственного (менеджера), status - id статуса (этапа сделки внутри воронки)",
                 "operationId": "94ba267502fcfa3d7761695a0f8425ce",
                 "requestBody": {
                     "content": {
@@ -634,6 +637,95 @@
                     },
                     "400": {
                         "description": "Bad Request"
+                    }
+                }
+            }
+        },
+        "/note/{id}": {
+            "get": {
+                "tags": [
+                    "note"
+                ],
+                "summary": "Возвращает примечание по id",
+                "operationId": "10d969d1be5b908949b935a57fa9701a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id примечания",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "default": "297766441"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/note/create": {
+            "post": {
+                "tags": [
+                    "note"
+                ],
+                "summary": "Создаёт примечания",
+                "description": "element_id - id сущности, element_type=2 - сделка, note_type=4 - системное примечание",
+                "operationId": "d1260cf1387538f30c1aeb2db8fc546f",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "text": "New Note",
+                                        "element_id": 27626723,
+                                        "element_type": "2",
+                                        "note_type": 4
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/note/update": {
+            "post": {
+                "tags": [
+                    "note"
+                ],
+                "summary": "Обновляет примечания",
+                "description": "element_id - id сущности",
+                "operationId": "17629b70a52f58241362b01d2fbc2e6b",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "example": {
+                                        "id": 297766441,
+                                        "element_id": 27626723,
+                                        "text": "New text"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK"
                     }
                 }
             }
