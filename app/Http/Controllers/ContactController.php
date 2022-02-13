@@ -80,46 +80,48 @@ class ContactController extends Controller
             'code' => 1,
             'message' => 'Успешно выполнено',
             'result' => [
-                'id' => 43543431,
-                'name' => 'empty contact',
-                'last_modified' => 1567441495,
-                'account_id' => 9585804,
-                'date_create' => 1539255547,
-                'created_user_id' => 595371,
-                'modified_user_id' => 3718531,
-                'responsible_user_id' => 595371,
-                'group_id' => 30426,
-                'closest_task' => 0,
-                'linked_company_id' => '0',
-                'company_name' => '',
-                'first_name' => null,
-                'last_name' => null,
-                'tags' => [],
-                'type' => 'contact',
-                'is_unsorted' => false,
-                'custom_fields' => [
-                    [
-                        'id' => 958187,
-                        'name' => 'Количество успешных сделок',
-                        'type_id' => 2,
-                        'values' => [
-                            [
-                                'value' => '0'
+                [
+                    'id' => 43543431,
+                    'name' => 'empty contact',
+                    'last_modified' => 1567441495,
+                    'account_id' => 9585804,
+                    'date_create' => 1539255547,
+                    'created_user_id' => 595371,
+                    'modified_user_id' => 3718531,
+                    'responsible_user_id' => 595371,
+                    'group_id' => 30426,
+                    'closest_task' => 0,
+                    'linked_company_id' => '0',
+                    'company_name' => '',
+                    'first_name' => null,
+                    'last_name' => null,
+                    'tags' => [],
+                    'type' => 'contact',
+                    'is_unsorted' => false,
+                    'custom_fields' => [
+                        [
+                            'id' => 958187,
+                            'name' => 'Количество успешных сделок',
+                            'type_id' => 2,
+                            'values' => [
+                                [
+                                    'value' => '0'
+                                ]
+                            ]
+                        ],
+                        [
+                            'id' => 958191,
+                            'name' => 'Бюджет успешных сделок',
+                            'type_id' => 2,
+                            'values' => [
+                                [
+                                    'value' => '0'
+                                ]
                             ]
                         ]
                     ],
-                    [
-                        'id' => 958191,
-                        'name' => 'Бюджет успешных сделок',
-                        'type_id' => 2,
-                        'values' => [
-                            [
-                                'value' => '0'
-                            ]
-                        ]
-                    ]
-                ],
-                'linked_leads_id' => []
+                    'linked_leads_id' => []
+                ]
             ],
             'count' => 1
         ]);
@@ -156,46 +158,48 @@ class ContactController extends Controller
             'code' => 1,
             'message' => 'Успешно выполнено',
             'result' => [
-                'id' => 43516805,
-                'name' => 'test_name',
-                'last_modified' => 1567442935,
-                'account_id' => 9585804,
-                'date_create' => 1487333321,
-                'created_user_id' => 595371,
-                'modified_user_id' => 3718531,
-                'responsible_user_id' => 595371,
-                'group_id' => 30426,
-                'closest_task' => 0,
-                'company_name' => '',
-                'linked_company_id' => '',
-                'first_name' => null,
-                'last_name' => null,
-                'tags' => [],
-                'type' => 'contact',
-                'is_unsorted' => false,
-                'custom_fields' => [
-                    [
-                        'id' => 958187,
-                        'name' => 'Количество успешных сделок',
-                        'type_id' => 2,
-                        'values' => [
-                            [
-                                'value' => '0'
+                [
+                    'id' => 43516805,
+                    'name' => 'test_name',
+                    'last_modified' => 1567442935,
+                    'account_id' => 9585804,
+                    'date_create' => 1487333321,
+                    'created_user_id' => 595371,
+                    'modified_user_id' => 3718531,
+                    'responsible_user_id' => 595371,
+                    'group_id' => 30426,
+                    'closest_task' => 0,
+                    'company_name' => '',
+                    'linked_company_id' => '',
+                    'first_name' => null,
+                    'last_name' => null,
+                    'tags' => [],
+                    'type' => 'contact',
+                    'is_unsorted' => false,
+                    'custom_fields' => [
+                        [
+                            'id' => 958187,
+                            'name' => 'Количество успешных сделок',
+                            'type_id' => 2,
+                            'values' => [
+                                [
+                                    'value' => '0'
+                                ]
+                            ]
+                        ],
+                        [
+                            'id' => 958191,
+                            'name' => 'Бюджет успешных сделок',
+                            'type_id' => 2,
+                            'values' => [
+                                [
+                                    'value' => '0'
+                                ]
                             ]
                         ]
                     ],
-                    [
-                        'id' => 958191,
-                        'name' => 'Бюджет успешных сделок',
-                        'type_id' => 2,
-                        'values' => [
-                            [
-                                'value' => '0'
-                            ]
-                        ]
-                    ]
-                ],
-                'linked_leads_id' => []
+                    'linked_leads_id' => []
+                ]
             ],
             'count' => 1
         ]);
