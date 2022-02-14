@@ -220,7 +220,7 @@ class CompanyController extends Controller
      *     tags={"company"},
      *     path="/company/create",
      *     summary="Создаёт компании",
-     *     description="crm_user_id - id ответственного (менеджера)",
+     *     description="crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers'))",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",

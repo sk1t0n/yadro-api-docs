@@ -210,7 +210,7 @@ class ContactController extends Controller
      *     tags={"contact"},
      *     path="/contact/create",
      *     summary="Создаёт контакты",
-     *     description="crm_user_id - id ответственного (менеджера)",
+     *     description="crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers'))",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
