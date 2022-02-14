@@ -392,6 +392,7 @@
                     "field"
                 ],
                 "summary": "Создаёт кастомные поля",
+                "description": "type=1 - текст (AMOCRM.cf_types), element_type=2 - сделка (AMOCRM.element_types)",
                 "operationId": "ebcd0af5323b48967b79d884ab9f75a5",
                 "requestBody": {
                     "content": {
@@ -400,7 +401,9 @@
                                 "type": "array",
                                 "items": {
                                     "example": {
-                                        "name": "Custom field name"
+                                        "name": "Custom field name",
+                                        "type": 1,
+                                        "element_type": 2
                                     }
                                 }
                             }
