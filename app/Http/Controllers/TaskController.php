@@ -130,7 +130,7 @@ class TaskController extends Controller
      *     tags={"task"},
      *     path="/task/create",
      *     summary="Создаёт задачу",
-     *     description="crm_user_id - id ответственного, element_id - id сущности, element_type=2 - сделка, type=2 - встреча",
+     *     description="crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), element_id - id сущности, element_type=2 - сделка (AMOCRM.element_types), type=2 - встреча (AMOCRM.todo_types)",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",

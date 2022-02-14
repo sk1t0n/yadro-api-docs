@@ -584,7 +584,7 @@
                     "lead"
                 ],
                 "summary": "Создаёт сделки",
-                "description": "crm_user_id - id ответственного (менеджера), status - id статуса (этапа сделки внутри воронки)",
+                "description": "crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), status - id статуса (этапа сделки внутри воронки)",
                 "operationId": "94ba267502fcfa3d7761695a0f8425ce",
                 "requestBody": {
                     "content": {
@@ -798,7 +798,7 @@
                     "task"
                 ],
                 "summary": "Создаёт задачу",
-                "description": "crm_user_id - id ответственного, element_id - id сущности, element_type=2 - сделка, type=2 - встреча",
+                "description": "crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), element_id - id сущности, element_type=2 - сделка (AMOCRM.element_types), type=2 - встреча (AMOCRM.todo_types)",
                 "operationId": "ace232b551c8c2c3edd4dbff9ab675fa",
                 "requestBody": {
                     "content": {
