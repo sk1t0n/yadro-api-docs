@@ -308,7 +308,7 @@ class LeadController extends Controller
      *     tags={"lead"},
      *     path="/lead/create",
      *     summary="Создаёт сделки",
-     *     description="crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), status - id статуса (этапа сделки внутри воронки)",
+     *     description="crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), status - id статуса (этапа сделки внутри воронки - AMOCRM.data.current_view.current_pipeline.statuses)",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",

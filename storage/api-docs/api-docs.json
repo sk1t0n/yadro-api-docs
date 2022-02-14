@@ -587,7 +587,7 @@
                     "lead"
                 ],
                 "summary": "Создаёт сделки",
-                "description": "crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), status - id статуса (этапа сделки внутри воронки)",
+                "description": "crm_user_id - id ответственного (менеджера - AMOCRM.constant('managers')), status - id статуса (этапа сделки внутри воронки - AMOCRM.data.current_view.current_pipeline.statuses)",
                 "operationId": "94ba267502fcfa3d7761695a0f8425ce",
                 "requestBody": {
                     "content": {
