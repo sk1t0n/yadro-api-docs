@@ -673,7 +673,7 @@
                     "note"
                 ],
                 "summary": "Создаёт примечания",
-                "description": "element_id - id сущности, element_type=2 - сделка, note_type=4 - системное примечание",
+                "description": "element_id - id сущности, element_type=2 - сделка (AMOCRM.element_types), note_type=4 - системное примечание (AMOCRM.note_types)",
                 "operationId": "d1260cf1387538f30c1aeb2db8fc546f",
                 "requestBody": {
                     "content": {

@@ -55,7 +55,7 @@ class NoteController extends Controller
      *     tags={"note"},
      *     path="/note/create",
      *     summary="Создаёт примечания",
-     *     description="element_id - id сущности, element_type=2 - сделка, note_type=4 - системное примечание",
+     *     description="element_id - id сущности, element_type=2 - сделка (AMOCRM.element_types), note_type=4 - системное примечание (AMOCRM.note_types)",
      *     @OA\RequestBody(
      *         @OA\MediaType(
      *             mediaType="application/json",
